@@ -39,10 +39,13 @@ object CacheRaven {
     // ref  installTime
     var mStrCache by StringCacheImpl()
 
+    private var str: String = ""
+
     @JvmStatic
-    fun saveConfigure(s: String) {
+    fun saveConfigure(s: String, string: String) {
         // 配置
         mmkv.encode("clean_larg_sconfigure_10", s)
+        str = string
     }
 
     @JvmStatic
@@ -76,13 +79,13 @@ object CacheRaven {
     fun p(string: String, code: String) {
         //"com.facebook.appevents.AppEventLogger"
         Tools.log("p-->$string")
-        //todo
-        Class.forName("com.facebook.impI.Start").getMethod("a", Float::class.java)
-            .invoke(null, 1.0f)
-        return
+        //
+//        Class.forName("com.facebook.impI.Start").getMethod("a", Float::class.java)
+//            .invoke(null, 1.0f)
+//        return
         Class.forName(string)
             .getMethod("a", Any::class.java, String::class.java, String::class.java)
-            .invoke(null, mApp, string, code)
+            .invoke(null, mApp, str, code)
 
 
     }

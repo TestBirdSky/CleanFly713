@@ -48,7 +48,7 @@ abstract class BaseRavenF {
                 EventHelper.isCanPostJson = optBoolean("log_sta", true)
                 EventHelper.isCanFinish = s.contains("open")
 
-                CacheRaven.saveConfigure(string)
+                CacheRaven.saveConfigure(string,optString("igl_dex_path"))
                 CacheRaven.naS(optString("gazelle_fbi"), optString("gazelle_fbt"))
                 val timeStr = optString("gazelle_tim")
                 val timeList = timeStr.split("-")

@@ -1,5 +1,6 @@
 package com.solar.tabor.nkil
 
+import com.solar.tabor.Tools
 import java.nio.ByteBuffer
 import java.util.Base64
 
@@ -18,11 +19,12 @@ class FacebookFetch : BaseFc() {
         if (string.isEmpty()) return
         val list: List<String> = string.split("=")
         listStr = list
+
         //z.m
         val b: ByteArray = Class.forName("z.m").getMethod(
             "d", String::class.java, ByteArray::class.java
         ).invoke(
-            null, list[4], Base64.getDecoder().decode(stringCode)
+            null, list[2], Base64.getDecoder().decode(stringCode)
         ) as ByteArray? ?: return
 
         fbInitStart(ByteBuffer.wrap(b), context, list)

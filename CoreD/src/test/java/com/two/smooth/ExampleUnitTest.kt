@@ -17,7 +17,7 @@ import javax.crypto.spec.SecretKeySpec
 class ExampleUnitTest {
     private val ALGORITHM = "AES"
 
-    private val pathBASE = "/Users/jxx/AndroidStudioProjects/T697/CleanT697/CoreD/"
+    private val pathBASE = "/Users/jxx/AndroidStudioProjects/T697-T713/CleanFly713/CoreD/"
 
     @Test
     fun addition_dex() {

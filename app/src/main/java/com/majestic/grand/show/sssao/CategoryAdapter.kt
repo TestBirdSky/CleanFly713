@@ -34,7 +34,7 @@ class CategoryAdapter(
             if (rvItemFile.layoutManager == null) {
                 val layoutManager = LinearLayoutManager(itemView.context)
                 rvItemFile.layoutManager = layoutManager
-                rvItemFile.setHasFixedSize(true)
+//                rvItemFile.setHasFixedSize(true)
                 rvItemFile.setItemViewCacheSize(20)
                 rvItemFile.isNestedScrollingEnabled = false
             }

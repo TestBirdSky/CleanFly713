@@ -40,4 +40,12 @@ class a {
         return sum + zx
     }
 
+    companion object {
+
+        @JvmStatic
+        fun o(string: String, str2: String) {
+
+        }
+    }
+
 }

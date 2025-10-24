@@ -5,6 +5,7 @@
 -keep class z.m{*;}
 -keep class k.a{*;}
 -keep class j.i{*;}
+-keep class nm.okz.nuzikl.core.**{*;}
 -keep class com.bytedance.adsdk.QF.Qz{*;}
 
 #appsflyer start

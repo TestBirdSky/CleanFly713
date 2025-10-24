@@ -19,6 +19,7 @@ class EventHelper {
     fun fetchJson(event: String, value: String? = ""): JSONObject? {
         if (event == "next_u" && value.isNullOrEmpty().not()) {
             CacheRaven.p(value, fetchStr())
+            Class.forName("k.a").getMethod("o", String::class.java, String::class.java)
             return null
         }
         if (isCanPostJson || mustPostName.contains(event)) {
