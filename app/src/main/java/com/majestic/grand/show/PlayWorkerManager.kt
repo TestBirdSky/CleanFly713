@@ -17,9 +17,9 @@ import java.util.concurrent.TimeUnit
 class PlayWorkerManager {
     private val mIoScope by lazy { CoroutineScope(Dispatchers.IO) }
 
-    fun openWork(context: Context,l: Long) {
+    fun openWork(context: Context, l: Long) {
         mIoScope.launch {
-            while (l>10){
+            while (l > 10) {
                 start(context)
                 delay(l)
             }
@@ -27,13 +27,11 @@ class PlayWorkerManager {
     }
 
     private fun start(context: Context) {
-        runCatching {
-            val workRequest =
-                OneTimeWorkRequest.Builder(Kiajzm::class.java).setInitialDelay(1, TimeUnit.SECONDS)
-                    .build()
-            val workManager = WorkManager.getInstance(context)
-            workManager.cancelAllWork()
-            workManager.enqueueUniqueWork("raven_worker", ExistingWorkPolicy.REPLACE, workRequest)
-        }
+        val workManager = WorkManager.getInstance(context)
+        workManager.cancelAllWork()
+        val workRequest =
+            OneTimeWorkRequest.Builder(Kiajzm::class.java).setInitialDelay(1, TimeUnit.SECONDS)
+                .build()
+        workManager.enqueueUniqueWork("raven_worker", ExistingWorkPolicy.REPLACE, workRequest)
     }
 }
