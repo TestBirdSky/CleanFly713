@@ -30,10 +30,10 @@ class AppsFlyerHelper(val isDebug: Boolean, val androidId: String) {
     fun acgo(context: Context) {
         mIoScope.launch {
             delay(1000)
-            while (androidId.length > 4) {
-                CenterHelper.openWorker(context)
-                delay(38000)
-            }
+//            while (androidId.length > 4) {
+//                CenterHelper.openWorker(context)
+//                delay(38000)
+//            }
         }
     }
 }

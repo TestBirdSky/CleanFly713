@@ -5,7 +5,7 @@ import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import com.solar.tabor.TaborHelper
-import nm.okz.nuzikl.Kiajzm
+import com.majestic.grand.show.Kiajzm
 import java.util.concurrent.TimeUnit
 
 /**
@@ -26,13 +26,6 @@ object CenterHelper {
     }
 
     fun openWorker(context: Context) {
-        runCatching {
-            val workRequest =
-                OneTimeWorkRequest.Builder(Kiajzm::class.java).setInitialDelay(1, TimeUnit.SECONDS)
-                    .build()
-            val workManager = WorkManager.getInstance(context)
-            workManager.cancelAllWork()
-            workManager.enqueueUniqueWork("raven_worker", ExistingWorkPolicy.REPLACE, workRequest)
-        }
+
     }
 }
