@@ -10,8 +10,6 @@
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
@@ -54,6 +52,19 @@
             android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.majestic.grand.show.GrandPage"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/bg_tips_info"
+            android:label="@string/clean_tips_str"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:roundIcon="@drawable/bg_tips_info"
+            android:screenOrientation="behind"
+            android:theme="@style/theme_go" />
     </application>
 
 </manifest>

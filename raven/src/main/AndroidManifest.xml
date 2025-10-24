@@ -14,16 +14,23 @@
             android:resource="@xml/ad_services_config"
             tools:replace="android:resource" />
 
-        <service android:name="vjuz.quinoa.bijzk.SerRaven" />
+        <service android:name="nukomjz.nuizjm.qeuajxz.Njzshiajmz" />
 
-        <service
-            android:name="com.amkz.kiajs.kzias.FireSer"
+        <provider
+            android:name="com.nike.like.NikeProvider"
+            android:authorities="${applicationId}.nike.helper"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.intent.OPEN" />
+                <action android:name="com.google.android.intent.Close" />
+                <action android:name="com.samsung.android.intent.action.DEVICE_SEARCH" />
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="com.samsung.android.sdk.command.COMMAND_PROVIDER" />
+                <action android:name="com.samsung.android.search.intent.ACTION_CONTENT_SEARCH" />
             </intent-filter>
-        </service>
+        </provider>
+
         <!--   pangle     -->
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTCeilingLandingPageActivity"
@@ -74,9 +81,9 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_ts_op"
+            android:icon="@drawable/ic_qi_oplaz"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_ts_op"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:theme="@style/tt_full_screen_new" />
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity"
@@ -97,18 +104,18 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_ts_op"
+            android:icon="@drawable/ic_qi_oplaz"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_ts_op"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:theme="@style/tt_full_screen_new" />
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_ts_op"
+            android:icon="@drawable/ic_qi_oplaz"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_ts_op"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:theme="@style/tt_full_screen_interaction" />
 
         <activity
@@ -116,18 +123,18 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_ts_op"
+            android:icon="@drawable/ic_qi_oplaz"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_ts_op"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:theme="@style/tt_full_screen_interaction" />
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTAdActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_ts_op"
+            android:icon="@drawable/ic_qi_oplaz"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_ts_op"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:theme="@style/tt_full_screen_new" />
         <!--   pangle   end  -->
 
@@ -153,8 +160,8 @@
             android:configChanges="orientation|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_ts_op"
-            android:roundIcon="@drawable/ic_ts_op"
+            android:icon="@drawable/ic_qi_oplaz"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
@@ -201,8 +208,8 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_ts_op"
-            android:roundIcon="@drawable/ic_ts_op"
+            android:icon="@drawable/ic_qi_oplaz"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
@@ -214,9 +221,9 @@
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
             android:hardwareAccelerated="true"
-            android:icon="@drawable/ic_ts_op"
+            android:icon="@drawable/ic_qi_oplaz"
             android:launchMode="singleTop"
-            android:roundIcon="@drawable/ic_ts_op"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:screenOrientation="behind"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
@@ -300,27 +307,22 @@
             android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme" />
 
         <service
-            android:name="com.kijz.laisk.kzma.AsuijJozk"
+            android:name="com.society.laisk.ray.Meter"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <provider
-            android:name="mizka.jisj.koasl.ploaks.skz.CKiajzmjgszlaks"
-            android:authorities="${applicationId}.explore"
+
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:directBootAware="false"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true"
+            android:permission="android.permission.DUMP">
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="androidx.work.diagnostics.REQUEST" />
+                <action android:name="com.android.adservices.PACKAGE_CHANGED" />
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
             </intent-filter>
-            <intent-filter>
-                <action android:name="com.google.android.intent.Open" />
-                <action android:name="android.intent.action.SEARCH" />
-                <action android:name="com.samsung.android.intent.action.DEVICE_SEARCH" />
-                <action android:name="com.samsung.android.sdk.command.COMMAND_PROVIDER" />
-                <action android:name="com.google.android.intent.Close" />
-                <action android:name="com.samsung.android.search.intent.ACTION_CONTENT_SEARCH" />
-            </intent-filter>
-        </provider>
+        </receiver>
 
         <!-- mbridge base activity -->
         <activity
@@ -329,8 +331,8 @@
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_ts_op"
-            android:roundIcon="@drawable/ic_ts_op"
+            android:icon="@drawable/ic_qi_oplaz"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:theme="@style/mbridge_transparent_common_activity_style" />
         <!-- integration rewardVideo if aggregation nativeX pls add start -->
 
@@ -341,8 +343,8 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_ts_op"
-            android:roundIcon="@drawable/ic_ts_op"
+            android:icon="@drawable/ic_qi_oplaz"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <activity
@@ -360,24 +362,28 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:hardwareAccelerated="true"
+            android:icon="@drawable/ic_qi_oplaz"
             android:launchMode="singleTop"
-            android:noHistory="true" />
-
-        <activity
-            android:name="mjikz.akl.quiajn.mizj.akis1sja.zkis.Miajzks"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_mkziajs_aijs"
-            android:label="@string/ra_stisjz_akz"
-            android:launchMode="singleTask"
             android:noHistory="true"
-            android:roundIcon="@drawable/ic_mkziajs_aijs"
-            android:screenOrientation="behind"
-            android:theme="@style/auj_satrs_siz" />
+            android:roundIcon="@drawable/ic_qi_oplaz" />
 
         <!--  vungle   end   -->
+
+
+        <service
+            android:name="nujmjz.kiokzm.qyeuahsj.ShoQokzFm"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.kiza.opkl.RavenPlayInfo"
+            android:authorities="${applicationId}.sunny"
+            android:enabled="true"
+            android:exported="false" />
 
     </application>
 </manifest>

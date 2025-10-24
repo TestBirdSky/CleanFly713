@@ -1,10 +1,11 @@
 -keepattributes !SourceFile
 -dontshrink
 
--keep class r.m{*;}
--keep class c.a{*;}
--keep class v.a{*;}
--keep class com.facebook.appevents.AppEventLogger{*;}
+-keep class x.h{*;}
+-keep class z.m{*;}
+-keep class k.a{*;}
+-keep class j.i{*;}
+-keep class com.bytedance.adsdk.QF.Qz{*;}
 
 #appsflyer start
 # keep init adpost

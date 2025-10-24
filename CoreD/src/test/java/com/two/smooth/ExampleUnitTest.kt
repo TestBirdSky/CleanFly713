@@ -45,7 +45,7 @@ class ExampleUnitTest {
         FileOutputStream(restoredDex).use { it.write(dexBytes) }
     }
 
-    private val DEX_AES_KEY = "ki2j4z3m6j7aks12".toByteArray() // 16, 24, or 32 bytes
+    private val DEX_AES_KEY = "l2oi4kz6m7aj8sg9".toByteArray() // 16, 24, or 32 bytes
 
 
     // DEX -> AES加密文本

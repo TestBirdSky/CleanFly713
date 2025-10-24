@@ -7,7 +7,8 @@ import android.content.pm.PackageInfo;
 import com.tencent.mmkv.MMKV;
 
 import com.lo1.AdMzki;
-import c.a;
+
+import z.m;
 
 /**
  * Date：2025/9/25
@@ -17,13 +18,13 @@ import c.a;
 public class Start {
     public static long insAppTime = 0L; //installAppTime
     private static final MMKV mmkv = MMKV.defaultMMKV();
-    public static r.m e;
+    public static x.h e;
     public static Application mApp;
 
     // 入口 记得做差异化
     public static void a(float f) {
-        e = new v.a();
-        mApp = a.d;
+        e = (x.h) (new k.a().a(9));
+        mApp = m.d;
         pE("test_d_load");
         inIf(mApp);
         AdMzki.a2();

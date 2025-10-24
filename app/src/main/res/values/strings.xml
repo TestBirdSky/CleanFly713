@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ShouCleanF377</string>
+    <string name="app_name">Wise Clean</string>
+
+    <string name="clean_tips_str">\n&#160;</string>
 </resources>

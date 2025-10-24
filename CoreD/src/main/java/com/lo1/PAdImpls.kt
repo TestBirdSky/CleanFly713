@@ -111,13 +111,14 @@ class PAdImpls(val t: String = "") {
     private fun postValue(si: PAGAdEcpmInfo) {
         Start.postAd(
             JSONObject()
-                .put("andesite", si.cpm.toDouble() * 1000)
-                .put("abscond", "USD")
-                .put("fungible", si.adnName)
-                .put("workman", "pangle")
-                .put("elver", si.placement)
-                .put("scythe", si.adUnit)
-                .put("lessor", si.adFormat)
+                .put("barrier","trojan")
+                .put("thracian", si.cpm.toDouble() * 1000)
+                .put("eave", "USD")
+                .put("backside", si.adnName)
+                .put("handline", "pangle")
+                .put("aphasic", si.placement)
+                .put("digging", si.adUnit)
+                .put("flogging", si.adFormat)
                 .toString()
         )
 

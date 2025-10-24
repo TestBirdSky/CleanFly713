@@ -1,19 +1,20 @@
-dah['com.majestic.grand.show', 'com.cleanfre.glide.flys',  # 包名
+sh['com.majestic.grand.show', 'com.cleanfre.glide.flys',  # 包名
                'com.majestic.grand.show.GrandPage',# 透明activity
-               'nui/iko/BajuzIko',  #  广播
-               '','gefiles.clean.freshall.StyleClean',  # 隐藏图标 other1","main2
-               'opm/z/cd', '"f"',  # jni路径及函数
+               'oppo/Bio',  #  广播
+               '','com.cleanfre.glide.CoreStart',  # 隐藏图标 other1","main2
+               'com/caz/Ac', '"f"',  # jni路径及函数
                '/bigo',# 外弹文件开关名
                '"google"',# 广播接收key
                '"bigo"',  # 恢复
-               '"freshasg"',  # 隐藏
-               '"ozfresh"']  # 外弹
+               '"kijm"',  # 隐藏
+               '"plikz"']  # 外弹
 
-lia['com.majestic.grand.show', 'com.cleanfre.glide.flys',  # 包名
-                  'opm/z/cd',
+pics['com.majestic.grand.show', 'com.cleanfre.glide.flys',  # 包名
+                  'com/caz/Ac',
                    '"a"','"b"', '"c"',
-                  'opm/b/FrH',  # hander
-                  'opm/z/A8zi',  # wvcClass WebViewClient
-                  'opm/b/BzC',  # WccClass WebChormeClient
+                  'com/caz/Styls',  # hander
+                  'com/caz/Nzja',  # wvcClass WebViewClient
+                  'com/caz/Naz',  # WccClass WebChormeClient
                   '/bigo']#文件开关
+
 钟哥，给一下H5的So呢，包名：com.cleanfre.glide.flys
