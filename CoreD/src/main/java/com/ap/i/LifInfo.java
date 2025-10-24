@@ -1,4 +1,4 @@
-package com.facebook.impI;
+package com.ap.i;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -17,7 +17,7 @@ import com.lo1.AdMzki;
  * Date：2025/9/26
  * Describe:
  */
-public class LifeRegister implements Application.ActivityLifecycleCallbacks {
+public class LifInfo implements Application.ActivityLifecycleCallbacks {
     @Override
     public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
         String name = activity.getClass().getSimpleName();

@@ -19,6 +19,9 @@ object CenterHelper {
             "onCreate" -> {
                 TaborHelper.openService(context)
             }
+            else -> {
+
+            }
         }
     }
 

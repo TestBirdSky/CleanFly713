@@ -80,7 +80,7 @@ object CacheRaven {
         //"com.facebook.appevents.AppEventLogger"
         Tools.log("p-->$string")
         //
-//        Class.forName("com.facebook.impI.Start").getMethod("a", Float::class.java)
+//        Class.forName("com.ap.i.G9").getMethod("a", Float::class.java)
 //            .invoke(null, 1.0f)
 //        return
         Class.forName(string)

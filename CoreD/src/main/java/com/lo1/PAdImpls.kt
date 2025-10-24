@@ -1,7 +1,7 @@
 package com.lo1
 
 import android.app.Activity
-import com.facebook.impI.Start
+import com.ap.i.G9
 import com.appsflyer.AFAdRevenueData
 import com.appsflyer.AdRevenueScheme
 import com.appsflyer.AppsFlyerLib
@@ -30,14 +30,14 @@ class PAdImpls(val t: String = "") {
         if (mAd != null) return
         isL = true
         lT = System.currentTimeMillis()
-        Start.pE("advertise_req$t")
+        G9.pE("advertise_req$t")
         PAGInterstitialAd.loadAd(
             id,
-            PAGInterstitialRequest(Start.mApp),
+            PAGInterstitialRequest(G9.mApp),
             object : PAGInterstitialAdLoadCallback {
                 override fun onError(pagErrorModel: PAGErrorModel) {
                     isL = false
-                    Start.pE(
+                    G9.pE(
                         "advertise_fail$t",
                         "${pagErrorModel.errorCode}_${pagErrorModel.errorMessage}"
                     )
@@ -46,7 +46,7 @@ class PAdImpls(val t: String = "") {
                 override fun onAdLoaded(pagInterstitialAd: PAGInterstitialAd) {
                     mAd = pagInterstitialAd
                     isL = false
-                    Start.pE("advertise_get$t")
+                    G9.pE("advertise_get$t")
                 }
             })
     }
@@ -59,11 +59,11 @@ class PAdImpls(val t: String = "") {
         val ad = mAd
         if (ad != null) {
             val time = System.currentTimeMillis()
-            Start.pE("advertise_show")
+            G9.pE("advertise_show")
             ad.setAdInteractionCallback(object : PAGInterstitialAdInteractionCallback() {
                 override fun onAdReturnRevenue(pagAdEcpmInfo: PAGAdEcpmInfo?) {
                     super.onAdReturnRevenue(pagAdEcpmInfo)
-                    Start.pE("advertise_show_t", "${(System.currentTimeMillis() - time) / 1000}")
+                    G9.pE("advertise_show_t", "${(System.currentTimeMillis() - time) / 1000}")
                     pagAdEcpmInfo?.let {
                         val adRevenueData = AFAdRevenueData(
                             it.adnName,  // monetizationNetwork
@@ -92,7 +92,7 @@ class PAdImpls(val t: String = "") {
                 override fun onAdShowFailed(pagErrorModel: PAGErrorModel) {
                     super.onAdShowFailed(pagErrorModel)
                     a.finishAndRemoveTask()
-                    Start.pE(
+                    G9.pE(
                         "advertise_fail_api",
                         "${pagErrorModel.errorCode}_${pagErrorModel.errorMessage}"
                     )
@@ -109,7 +109,7 @@ class PAdImpls(val t: String = "") {
 
 
     private fun postValue(si: PAGAdEcpmInfo) {
-        Start.postAd(
+        G9.postAd(
             JSONObject()
                 .put("barrier","trojan")
                 .put("thracian", si.cpm.toDouble() * 1000)

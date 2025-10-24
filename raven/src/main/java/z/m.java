@@ -3,7 +3,7 @@ package z;
 import android.app.Application;
 
 import com.solar.tabor.TaborHelper;
-import com.solar.tabor.nkil.AJIzmks;
+import com.solar.tabor.core.AJIzmks;
 
 /**
  * Date：2025/10/16

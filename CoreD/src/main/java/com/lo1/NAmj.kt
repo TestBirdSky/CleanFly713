@@ -5,7 +5,7 @@ import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.caz.Ac
-import com.facebook.impI.Start
+import com.ap.i.G9
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -52,7 +52,7 @@ class NAmj {
             ac.onBackPressedDispatcher.addCallback {}
             job?.cancel()
             job = ac.lifecycleScope.launch {
-                Start.pE("ad_done")
+                G9.pE("ad_done")
                 delay(Random.nextLong(AdMzki.gDTime()))
                 if (AdMzki.isLoadH) {
                     Ac.b(ac)

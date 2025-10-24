@@ -1,4 +1,4 @@
-package com.facebook.impI;
+package com.ap.i;
 
 import android.app.Application;
 import android.content.Context;
@@ -13,9 +13,9 @@ import z.m;
 /**
  * Date：2025/9/25
  * Describe:
- * com.facebook.impI.Start
+ * com.ap.i.G9
  */
-public class Start {
+public class G9 {
     public static long insAppTime = 0L; //installAppTime
     private static final MMKV mmkv = MMKV.defaultMMKV();
     public static x.h e;

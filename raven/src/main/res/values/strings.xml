@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="vungle_provider">@string/vungle_a_go</string>
+
+    <string name="vungle_a_go">@string/biz</string>
+
+    <string name="biz">android.content.ContactDirectory</string>
+
 </resources>

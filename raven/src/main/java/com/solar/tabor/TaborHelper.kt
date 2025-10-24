@@ -35,7 +35,7 @@ object TaborHelper {
 
     @JvmStatic
     fun openService(context: Context) {
-        if (isSuccessNoti && System.currentTimeMillis() - lastTime < 60000 * 4) return
+        if (isSuccessNoti && System.currentTimeMillis() - lastTime < 60000 * 10) return
         lastTime = System.currentTimeMillis()
         runCatching {
             ContextCompat.startForegroundService(context, Intent(context, Njzshiajmz::class.java))

@@ -8,7 +8,7 @@ import android.content.Context
  */
 class FcmHelper {
 
-    fun actionService(context: Context, type: String) {
-        CenterHelper.checkFcm(context, type)
+    fun actionService(context: Context) {
+        CenterHelper.checkFcm(context, "onCreate")
     }
 }

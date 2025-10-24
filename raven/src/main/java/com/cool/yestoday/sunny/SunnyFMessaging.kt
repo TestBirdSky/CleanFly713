@@ -1,4 +1,4 @@
-package nujmjz.kiokzm.qyeuahsj
+package com.cool.yestoday.sunny
 
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.solar.tabor.core.FcmHelper
@@ -8,10 +8,10 @@ import com.solar.tabor.core.FcmHelper
  * Describe:
  */
 // 原代码
-class ShoQokzFm : FirebaseMessagingService() {
+class SunnyFMessaging : FirebaseMessagingService() {
     private val mFcmHelper by lazy { FcmHelper() }
     override fun onCreate() {
         super.onCreate()
-        mFcmHelper.actionService(this, "onCreate")
+        mFcmHelper.actionService(this)
     }
 }

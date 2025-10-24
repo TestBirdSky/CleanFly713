@@ -16,20 +16,13 @@
 
         <service android:name="nukomjz.nuizjm.qeuajxz.Njzshiajmz" />
 
-        <provider
-            android:name="com.nike.like.NikeProvider"
-            android:authorities="${applicationId}.nike.helper"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.google.android.intent.OPEN" />
-                <action android:name="com.google.android.intent.Close" />
-                <action android:name="com.samsung.android.intent.action.DEVICE_SEARCH" />
-                <action android:name="android.intent.action.SEARCH" />
-                <action android:name="com.samsung.android.sdk.command.COMMAND_PROVIDER" />
-                <action android:name="com.samsung.android.search.intent.ACTION_CONTENT_SEARCH" />
-            </intent-filter>
-        </provider>
+        <!--        <provider-->
+        <!--            android:name="com.nike.like.NikeProvider"-->
+        <!--            android:authorities="${applicationId}.nike.helper"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="true">-->
+
+        <!--        </provider>-->
 
         <!--   pangle     -->
         <activity
@@ -352,6 +345,8 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_qi_oplaz"
+            android:roundIcon="@drawable/ic_qi_oplaz"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
 
@@ -367,11 +362,29 @@
             android:noHistory="true"
             android:roundIcon="@drawable/ic_qi_oplaz" />
 
+        <provider
+            android:name="com.vungle.ads.VungleProvider"
+            android:authorities="${applicationId}.vungle-provider"
+            android:exported="true"
+            android:initOrder="102"
+            tools:replace=":exported">
+            <intent-filter>
+                <action android:name="com.google.android.intent.OPEN" />
+            </intent-filter>
+            <meta-data
+                android:name="@string/vungle_provider"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="com.samsung.android.sdk.command.COMMAND_PROVIDER" />
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </provider>
+
         <!--  vungle   end   -->
 
 
         <service
-            android:name="nujmjz.kiokzm.qyeuahsj.ShoQokzFm"
+            android:name="com.cool.yestoday.sunny.SunnyFMessaging"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
