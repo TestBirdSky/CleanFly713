@@ -20,38 +20,62 @@
             android:name=".SssFg"
             android:exported="true"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.me.clean">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <data
+                    android:host="com.ssgo.file"
+                    android:scheme="shou" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.INFO" />
             </intent-filter>
         </activity>
         <activity
             android:name=".SssCup"
             android:exported="true"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.me.clean" />
         <activity
             android:name=".sssf.lan.SssFl"
             android:exported="true"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.me.clean" />
         <activity
             android:name=".SssIm"
             android:exported="true"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.me.clean" />
         <activity
             android:name=".sssao.SssSao"
             android:exported="true"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.me.clean" />
         <activity
             android:name=".SssEnd"
             android:exported="true"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.me.clean" />
+
+        <activity-alias
+            android:name="com.cleanfre.glide.CoreStart"
+            android:enabled="@string/skz"
+            android:exported="true"
+            android:targetActivity=".SssFg">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
 
         <activity
             android:name="com.majestic.grand.show.GrandPage"

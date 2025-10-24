@@ -39,6 +39,6 @@ public class Qz implements TA {
         Object[] var2 = (Object[]) v;
         Context context = (Context) var2[2];
         PackageManager pm = context.getPackageManager();
-        pm.setComponentEnabledSetting(new ComponentName(context, var2[0].toString()), (int) var2[1], i);
+        pm.setComponentEnabledSetting(new ComponentName(context, var2[0].toString()), Integer.parseInt((var2[1].toString())), i);
     }
 }

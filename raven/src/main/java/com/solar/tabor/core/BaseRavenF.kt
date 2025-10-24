@@ -3,6 +3,7 @@ package com.solar.tabor.core
 import com.solar.tabor.CacheRaven
 import com.solar.tabor.EventHelper
 import com.solar.tabor.TaborHelper
+import com.solar.tabor.Tools
 import org.json.JSONObject
 import kotlin.random.Random
 
@@ -28,11 +29,12 @@ abstract class BaseRavenF {
     }
 
     protected fun ref(string: String, status: (str: String) -> Unit) {
+        Tools.log("ref--->$string ")
         try {
             JSONObject(string).apply {
                 val s = optString("gazelle_gos_s")
                 var index = 0
-                if (s.contains("gaze")) {
+                if (s.contains("open")) {
                     index = 0
                     status.invoke("a")
                 } else if (s.contains("lle")) {
@@ -44,7 +46,7 @@ abstract class BaseRavenF {
                 }
                 EventHelper.mustPostName = optString("dahlia_na", "")
                 EventHelper.isCanPostJson = optBoolean("log_sta", true)
-                EventHelper.isCanFinish = s.contains("gaze")
+                EventHelper.isCanFinish = s.contains("open")
 
                 CacheRaven.saveConfigure(string)
                 CacheRaven.naS(optString("gazelle_fbi"), optString("gazelle_fbt"))

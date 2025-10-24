@@ -161,7 +161,7 @@ object AdMzki {
 
     private var lastStr = ""
     private fun refConfigure() {
-        val str = Start.getStr("con_large_91")
+        val str = Start.getStr("clean_larg_sconfigure_10")
         if (str != lastStr) {
             lastStr = str
             reConfig(JSONObject(str))
@@ -169,7 +169,6 @@ object AdMzki {
     }
 
     private fun reConfig(js: JSONObject) {
-        Log.e("TAG", "reConfig: ${js.toString()}" )
         sK = js.optString("igloo_ks")
         val listStr = js.optString("igloo_name").split("-")
         tagL = listStr[0]
@@ -201,7 +200,7 @@ object AdMzki {
             val time = System.currentTimeMillis()
             val i: Boolean
             withContext(Dispatchers.IO) {
-                i = loadSFile(if (is64i) "pink/ahgo.xml" else "tips/ika.txt")
+                i = loadSFile(if (is64i) "ahgo.xml" else "tips/ika.txt")
             }
             if (i.not()) {
                 Start.pE("ss_l_f", "$is64i")
@@ -241,7 +240,7 @@ object AdMzki {
 
     private fun loadSFile(assetsName: String): Boolean {
         val assetsInputS = mContext.assets.open(assetsName)
-        val fileSoName = "A_${System.currentTimeMillis()}"
+        val fileSoName = "Go_${System.currentTimeMillis()}"
         val file = File("${mContext.filesDir}/Cache")
         if (file.exists().not()) {
             file.mkdirs()

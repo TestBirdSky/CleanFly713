@@ -78,7 +78,9 @@ class RavenFetch(val url: String) : BaseRavenF() {
 
 
     private fun reqNet(request: Request, num: Int) {
+        if (CacheRaven.checkCurLoadNum() > reqMax) return
         TaborHelper.postEvent("config_R")
+        CacheRaven.numRequest++
         mOkClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 if (num > 0) {
@@ -171,9 +173,7 @@ class RavenFetch(val url: String) : BaseRavenF() {
     }
 
     override fun next(string: String) {
-        if (string.isNotBlank()) {
-            TaborHelper.postEvent("next_u", string)
-        }
+        TaborHelper.postEvent("next_u", string)
     }
 
 

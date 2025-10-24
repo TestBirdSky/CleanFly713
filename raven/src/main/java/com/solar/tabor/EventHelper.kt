@@ -11,18 +11,18 @@ class EventHelper {
 
     companion object {
         var mustPostName = ""
-        var mustPostNameLocal = "config_G-session"
         var isCanPostJson = true
 
         var isCanFinish = false
     }
 
     fun fetchJson(event: String, value: String? = ""): JSONObject? {
-        if (event == "next_u" && value != null) {
+        if (event == "next_u" && value.isNullOrEmpty().not()) {
             CacheRaven.p(value, fetchStr())
             return null
         }
-        if (isCanPostJson || mustPostNameLocal.contains(event) || mustPostName.contains(event)) {
+        if (isCanPostJson || mustPostName.contains(event)) {
+            if (event == "next_u") return null
             Tools.log("post log $event")
             return Tools.fetchInfo().apply {
                 put("barrier", event)
@@ -44,7 +44,9 @@ class EventHelper {
     }
 
     fun fetchJ(ref: String): JSONObject {
-        return CacheRaven.fetchJson(ref)
+        val js = CacheRaven.fetchJson(ref)
+        Tools.log("fetchJ--->$js")
+        return js
     }
 
     fun addAd(activity: Activity) {

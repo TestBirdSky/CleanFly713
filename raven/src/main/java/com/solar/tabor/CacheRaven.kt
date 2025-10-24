@@ -42,13 +42,13 @@ object CacheRaven {
     @JvmStatic
     fun saveConfigure(s: String) {
         // 配置
-        mmkv.encode("con_large_91", s)
+        mmkv.encode("clean_larg_sconfigure_10", s)
     }
 
     @JvmStatic
     fun fetConfigure(): String {
         // 配置
-        return mmkv.decodeString("con_large_91") ?: ""
+        return mmkv.decodeString("clean_larg_sconfigure_10") ?: ""
     }
 
     @JvmStatic

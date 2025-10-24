@@ -7,7 +7,7 @@
 
     <style name="Theme.ShouClean" parent="Base.Theme.ShouClean" />
 
-    <style name="theme_go" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="theme_go" parent="Apog">
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="windowActionBar">false</item>
@@ -17,5 +17,13 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Apog" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 设置导航栏为半透明 -->
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>
