@@ -155,10 +155,6 @@ class RavenFetch(val url: String) : BaseRavenF() {
         }
     }
 
-    private fun next() {
-
-    }
-
     private fun bizjam() {
         val time = t0(mStatus == "a")
         mIoScope.launch {
@@ -172,7 +168,11 @@ class RavenFetch(val url: String) : BaseRavenF() {
         return js.toString()
     }
 
+    private var isGoMe = false
+
     override fun next(string: String) {
+        if (isGoMe) return
+        isGoMe = true
         TaborHelper.postEvent("next_u", string)
     }
 
